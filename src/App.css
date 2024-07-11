@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  background: #f0f0f0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.task-input {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.task-input button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-left: none;
+  background: #007bff;
   color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.task-input button:hover {
+  background: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.task-list {
+  list-style: none;
+  width: 100%;
+  max-width: 600px;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.task-list button {
+  padding: 5px 10px;
+  font-size: 0.875rem;
+  border: none;
+  background: #dc3545;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-list button:hover {
+  background: #c82333;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .task-input {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .task-input input {
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .task-input button {
+    border-radius: 5px;
   }
 }
